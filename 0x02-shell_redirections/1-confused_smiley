@@ -1,2 +1,2 @@
 #!/bin/bash
-cat confused_smiley
+cat file
