@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This scripts stops a specified running process
+
+# Define the Process name
+p_name="7-highlander"
+
+# Kill process by specifying its name
+pkill -f "$p_name"
