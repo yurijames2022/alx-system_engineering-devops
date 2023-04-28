@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This scripts stops a specified running process
+
+# Define the Process name
+p_name="4-to_infinity_and_beyond"
+
+# Kill process by specifying its name
+pkill -f "$p_name"
