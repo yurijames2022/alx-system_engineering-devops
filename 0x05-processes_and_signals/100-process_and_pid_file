@@ -7,7 +7,6 @@
 # when receiving a SIGQUIT or SIGTERM signal
 
 # Create file and store its pid
-touch /var/run/myscript.pid
 echo $$ > /var/run/myscript.pid
 
 # Function to handle SIGTERM signal
@@ -32,16 +31,14 @@ trap sigint_handler SIGINT
 function sigquit_handler()
 {
     rm /var/run/myscript.pid
-    exit
+    exit 0
 }
 # Trap the function to SIGQUIT
 trap sigquit_handler SIGQUIT
 
-# Display "To infinity and beyond" indefinetly using until loop
-i=0
+# Display "To infinity and beyond" indefinetly using while loop
 
-
-until [ "$i" -eq 1 ]
+while true
 do
     echo "To infinity and beyond"
 done
