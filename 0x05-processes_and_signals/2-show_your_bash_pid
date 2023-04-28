@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script gets the pid of bash
+# shellcheck disable=SC2009
+
+
+ps aux | grep 'bash' | tail -3
