@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displays bash ID in a summarized format (id and name only)
+echo $(pgrep bash)

@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
-# This scripts stops a specified running process
+This scripts terminates the 4-to_infinity_and_beyond process
 
-# Define the Process name
+# Define Process name to kill
 p_name="7-highlander"
 
-# Kill process by specifying its name
-pkill -f "$p_name"
+# Get the PID
+pid=$(pgrep -f "$p_name")
+
+# Check if process is running
+if [ -z "$pid" ]
+then
+        exit
+else
+        kill "$pid"
+fi
