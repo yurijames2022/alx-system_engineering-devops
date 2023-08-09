@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Function that queries the Reddit API and prints the titles of the first 10 hot posts
+Function that queries Reddit API and prints titles of the first 10 hot posts
 '''
 import requests
 
@@ -17,7 +17,8 @@ def top_ten(subreddit):
     params = {
         'limit': 10
     }
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    response = requests\
+        .get(url, headers=headers, params=params, allow_redirects=False)
     if response.status_code == 200:
         data = response.json()
         hot_posts = data['data']['children']
